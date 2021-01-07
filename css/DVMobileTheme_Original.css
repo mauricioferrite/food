@@ -1,0 +1,895 @@
+/* ===================================================================== */
+/* ===================================================================== */
+
+/*  Gulf Mobile Theme Customization                                      */
+
+/*  $0 - Root - CSS Variables                                            */
+/*  $1 - Resets (https://necolas.github.io/normalize.css/)               */
+/*  $2 - HTML Elements                                                   */
+/*       $2.1 - HTML Elements - Links                                    */
+/*       $2.2 - HTML Elements - Images                                   */
+/*       $2.3 - HTML Elements - Headings                                 */
+/*       $2.4 - HTML Elements - Inputs and Selectors                     */
+/*       $2.5 - HTML Elements - Buttons                                  */
+/*  $3 - Page Layout                                                     */
+/*       $3.1 - Page Layout - Header                                     */
+/*              $3.1.1 - Page Layout - Header Top                        */
+/*              $3.1.2 - Page Layout - Header Content                    */
+/*       $3.2 - Page Layout - Menu                                       */
+/*       $3.3 - Page Layout - Content                                    */
+/*       $3.4 - Page Layout - Login                                      */
+/*  $4 - Patterns                                                        */
+/*       $4.1 - Patterns - Adaptive                                      */
+/*              $4.1.1   - Patterns - Adaptive - Columns                 */
+/*              $4.1.2   - Patterns - Adaptive - Gallery                 */
+/*              $4.1.3   - Patterns - Adaptive - MasterDetail            */
+/*       $4.2 - Patterns - Content                                       */
+/*              $4.2.1   - Patterns - Content - Accordion                */
+/*              $4.2.2   - Patterns - Content - Alert                    */
+/*              $4.2.3   - Patterns - Content - BlankSlate               */
+/*              $4.2.4   - Patterns - Content - Card                     */
+/*              $4.2.5   - Patterns - Content - CardBackground           */
+/*              $4.2.6   - Patterns - Content - CardItem                 */
+/*              $4.2.7   - Patterns - Content - CardSectioned            */
+/*              $4.2.8   - Patterns - Content - ChatMessage              */
+/*              $4.2.9   - Patterns - Content - FlipContent              */
+/*              $4.2.10  - Patterns - Content - FloatingContent          */
+/*              $4.2.11  - Patterns - Content - ListItemContent          */
+/*              $4.2.12  - Patterns - Content - Section                  */
+/*              $4.2.13  - Patterns - Content - Tag                      */
+/*              $4.2.14  - Patterns - Content - Tooltip                  */
+/*              $4.2.15  - Patterns - Content - UserAvatar               */
+/*       $4.3 - Patterns - Interaction                                   */
+/*              $4.3.1   - Patterns - Interaction - ActionSheet          */
+/*              $4.3.2   - Patterns - Interaction - Animate              */
+/*              $4.3.3   - Patterns - Interaction - AnimatedLabel        */
+/*              $4.3.4   - Patterns - Interaction - Carousel             */
+/*              $4.3.5   - Patterns - Interaction - DatePicker           */
+/*              $4.3.6   - Patterns - Interaction - DropdownSearch       */
+/*              $4.3.7   - Patterns - Interaction - DropdownTags         */
+/*              $4.3.8   - Patterns - Interaction - FloatingActions      */
+/*              $4.3.9   - Patterns - Interaction - HorizontalScroll     */
+/*              $4.3.10  - Patterns - Interaction - LightBoxImage        */
+/*              $4.3.11  - Patterns - Interaction - Notification         */
+/*              $4.3.12  - Patterns - Interaction - RangeSlider          */
+/*              $4.3.13  - Patterns - Interaction - Search               */
+/*              $4.3.14  - Patterns - Interaction - Sidebar              */
+/*              $4.3.15  - Patterns - Interaction - StackedCards         */
+/*              $4.3.16  - Patterns - Interaction - Video                */
+/*       $4.4 - Patterns - Navigation                                    */
+/*              $4.4.1   - Patterns - Navigation - BottomBarItem         */
+/*              $4.4.1   - Patterns - Navigation - Breadcrumbs           */
+/*              $4.4.5   - Patterns - Navigation - Pagination            */
+/*              $4.4.3   - Patterns - Navigation - SectionIndex          */
+/*              $4.4.5   - Patterns - Navigation - Tabs                  */
+/*              $4.4.6   - Patterns - Navigation - Timeline              */
+/*              $4.4.7   - Patterns - Navigation - Wizard                */
+/*       $4.5 - Patterns - Numbers                                       */
+/*              $4.5.1   - Patterns - Numbers - Badge                    */
+/*              $4.5.2   - Patterns - Numbers - Counter                  */
+/*              $4.5.3   - Patterns - Numbers - IconBadge                */
+/*              $4.5.4   - Patterns - Numbers - ProgressBar              */
+/*              $4.5.5   - Patterns - Numbers - ProgressCircle           */
+/*              $4.5.6   - Patterns - Numbers - ProgressCircleFraction   */
+/*       $4.6 - Patterns - Utilities                                     */
+/*              $4.6.1   - Patterns - Utilities - AlignCenter            */
+/*              $4.6.2   - Patterns - Utilities - ButtonLoading          */
+/*              $4.6.3   - Patterns - Utilities - CenterContent          */
+/*              $4.6.4   - Patterns - Utilities - MarginContainer        */
+/*              $4.6.5   - Patterns - Utilities - Separator              */
+/*  $5 - Widgets                                                         */
+/*       $5.1  - Widgets - List                                          */
+/*       $5.2  - Widgets - ListItem                                      */
+/*       $5.3  - Widgets - Table                                         */
+/*       $5.4  - Widgets - BulkActions                                   */
+/*       $5.5  - Widgets - Form                                          */
+/*       $5.6  - Widgets - Upload                                        */
+/*       $5.7  - Widgets - ButtonGroup                                   */
+/*       $5.8  - Widgets - Popover                                       */
+/*       $5.9  - Widgets - Popup                                         */
+/*       $5.10 - Widgets - FeedbackMessage                               */
+/*       $5.11 - Widgets - Radio Button                                  */
+/*  $6 - Styles                                                          */
+/*       $6.1 - Styles - Typography                                      */
+/*              $6.1.1 - Styles - Typography - Sizes Desktop             */
+/*              $6.1.2 - Styles - Typography - Sizes Tablet              */
+/*              $6.1.3 - Styles - Typography - Sizes Phone               */
+/*              $6.1.4 - Styles - Typography - Transform                 */
+/*              $6.1.5 - Styles - Typography - Weight                    */
+/*       $6.2 - Styles - Colors                                          */
+/*              $6.2.1 - Styles - Colors - Brand                         */
+/*              $6.2.2 - Styles - Colors - Extendend                     */
+/*              $6.2.3 - Styles - Colors - Neutral                       */
+/*              $6.2.4 - Styles - Colors - Semantic                      */
+/*       $6.3 - Styles - Space                                           */
+/*              $6.3.1  - Styles - Space - Padding                       */
+/*              $6.3.2  - Styles - Space - Padding Top                   */
+/*              $6.3.3  - Styles - Space - Padding Right                 */
+/*              $6.3.4  - Styles - Space - Padding Bottom                */
+/*              $6.3.5  - Styles - Space - Padding Left                  */
+/*              $6.3.6  - Styles - Space - Padding Vertical              */
+/*              $6.3.7  - Styles - Space - Padding Horizontal            */
+/*              $6.3.8  - Styles - Space - Margin                        */
+/*              $6.3.9  - Styles - Space - Margin Top                    */
+/*              $6.3.10 - Styles - Space - Margin Right                  */
+/*              $6.3.11 - Styles - Space - Margin Bottom                 */
+/*              $6.3.12 - Styles - Space - Margin Left                   */
+/*              $6.3.13 - Styles - Space - Margin Vertical               */
+/*              $6.3.14 - Styles - Space - Margin Horizontal             */
+/*       $6.4 - Styles - Border Radius                                   */
+/*       $6.5 - Styles - Border Size                                     */
+/*       $6.6 - Styles - Elevation/Shadows                               */
+/*       $6.7 - Styles - Display Flex Properties                         */
+/*       $6.8 - Styles - Others                                          */
+/*  $7 - Screen Transitions                                              */
+/* ===================================================================== */
+/* ===================================================================== */
+
+/*---------- $1.0. Imports ----------*/
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('/DVMobile_Theme/SFProDisplay-Regular.woff2') format('woff2'),
+        url('/DVMobile_Theme/SFProDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('/DVMobile_Theme/SFProDisplay-Bold.woff2') format('woff2'),
+        url('/DVMobile_Theme/SFProDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('/DVMobile_Theme/SFProDisplay-Light.woff2') format('woff2'),
+        url('/DVMobile_Theme/SFProDisplay-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('/DVMobile_Theme/SFProDisplay-Semibold.woff2') format('woff2'),
+        url('/DVMobile_Theme/SFProDisplay-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProText';
+    src: url('/DVMobile_Theme/SFProText-Semibold.woff2') format('woff2'),
+        url('/DVMobile_Theme/SFProText-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProText';
+    src: url('/DVMobile_Theme/SFProText-Light.woff2') format('woff2'),
+        url('/DVMobile_Theme/SFProText-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProText';
+    src: url('/DVMobile_Theme/SFProText-Bold.woff2') format('woff2'),
+        url('/DVMobile_Theme/SFProText-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProText';
+    src: url('/DVMobile_Theme/SFProText-Regular.woff2') format('woff2'),
+        url('/DVMobile_Theme/SFProText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'gulficon';
+  src:
+    url('/DVMobile_Theme/gulficon.ttf') format('truetype'),
+    url('/DVMobile_Theme/gulficon.woff') format('woff'),
+    url('/DVMobile_Theme/gulficon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.gulficon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gulficon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gulficon-search:before {
+  content: "\e909";
+}
+.gulficon-shopping-cart:before {
+  content: "\e900";
+}
+.gulficon-pencil:before {
+  content: "\e901";
+}
+.gulficon-compass:before {
+  content: "\e902";
+}
+.gulficon-social:before {
+  content: "\e903";
+}
+.gulficon-plus:before {
+  content: "\e904";
+}
+.gulficon-pin:before {
+  content: "\e905";
+}
+.gulficon-location-arrow:before {
+  content: "\e906";
+}
+.gulficon-tag:before {
+  content: "\e907";
+}
+.gulficon-user:before {
+  content: "\e908";
+}
+.gulficon-cart:before {
+  content: "\e991";
+}
+.gulficon-compass:before {
+  content: "\e993";
+}
+
+
+/*---------- $1.1. Resets ----------*/
+:root {
+
+
+     
+    /* Color - Extended */
+    --color-red-lightest: #fde9eb;
+    --color-red-lighter: #f7a7b0;
+    --color-red-light: #f04e61;
+    --color-red: #ec2239;
+    --color-red-dark: #bd1b2e;
+    --color-red-darker: #8e1422;
+    --color-red-darkest: #5e0e17;
+
+    /* Space */
+    --space-s-plus: 12px;
+
+    /* App Settings */
+    --color-background-body: var(--color-neutral-0);
+}
+
+html {
+    font-family: 'SFProText';
+}
+
+/*---------- $1.2 Text and image formatting ----------*/
+
+.sf-display {
+    font-family: 'SFProDisplay';
+}
+
+.sf-text {
+    font-family: 'SFProText';
+}
+
+h1,.heading1,
+h2,.heading2,
+h3,.heading3,
+h4,.heading4,
+h5,.heading5,
+h6,.heading6 {
+    font-family: 'SFProDisplay';
+}
+
+.font-size-h1 { font-size: var(--font-size-h1); }
+.font-size-h2 { font-size: var(--font-size-h2); }
+.font-size-h3 { font-size: var(--font-size-h3); }
+.font-size-h4 { font-size: var(--font-size-h4); }
+.font-size-h5 { font-size: var(--font-size-h5); }
+.font-size-h6 { font-size: var(--font-size-h6); }
+
+.phone .font-size-h1 { --font-size-h1: 28px; }
+.phone .font-size-h2 { --font-size-h2: 24px; }
+.phone .font-size-h3 { --font-size-h3: 22px; } 
+.phone .font-size-h4 { --font-size-h4: 20px; }
+.phone .font-size-h5 { --font-size-h5: 18px; }
+.phone .font-size-h6 { --font-size-h6: 16px; }
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.line-height-quarter {
+    line-height: 1.25;
+}
+
+/*---------- $1.3 Page layout ----------*/
+
+.layout-native header.header {
+    box-shadow: var(--shadow-none);
+    color: var(--color-neutral-0);
+}
+
+.layout-native .header a,
+.layout-native .header a:visited {
+    color: var(--color-neutral-0);
+}
+
+.layout-native header.header .header-content > div {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-bottom: var(--space-base);
+}
+.layout-native .menu-icon .menu-icon-line {
+    background-color: var(--color-neutral-0);
+}
+
+/* Product Details Page */
+
+.product-detail-margin-container {
+    padding: 26px 24px;
+}
+.product-detail-container .star-rating {
+    display: flex;
+    align-items: center;
+}
+
+.product-detail-container { 
+    background: var(--color-neutral-0);
+    border-radius: 20px 20px 0;
+    margin-top: calc(-1 * var(--space-m));
+    position: relative;
+}
+
+.product-detail-like {
+    border: var(--border-size-s) solid var(--color-neutral-5);
+    border-radius: var(--border-radius-circle);
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    top: 26px;
+    right: var(--space-m);
+}
+.product-detail-like i {
+    color: var(--color-primary);
+    font-size: 17px;
+}
+.product-detail-desc i {
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.layout-native .section-title .product-detail-reviews-header i{
+    font-size: var(--font-size-h5);
+    margin-right: 0;
+    margin-left: var(--space-s);
+    vertical-align: middle;
+}
+
+/* Shopping Cart Page */
+
+.shopping-cart-coupon {
+    align-items: center;
+    border: var(--border-size-s) solid var(--color-neutral-5);
+    padding-right: var(--space-base);
+    border-radius: var(--border-radius-soft);
+}
+.shopping-cart-coupon .form-control[data-input]:hover,
+.shopping-cart-coupon .form-control[data-input]:focus{
+    border:0;   
+}
+.shopping-cart-coupon .input-text {
+    flex:1;
+}
+.shopping-cart-coupon .input-text input {
+    border: 0;
+    width: 100%;
+}
+.order-summary-container {
+    background: var(--color-neutral-1);
+    margin-top: var(--space-base);
+}
+
+/* Login */
+.layout-native .login-screen .login-form {
+    padding: var(--space-none) var(--space-m) var(--space-m);
+}
+.layout-native .login-screen {
+    align-items: flex-start;
+}
+.layout-native .login-screen .animated-label-text {
+    font-size: var(--font-size-xs);
+}
+.layout-native .login-screen .animated-label-input input {
+    font-size: var(--font-size-s);
+}
+
+/* Onboarding */
+.onboarding-layout .carousel .carousel-dots-container {
+    margin-top: var(--space-xxl);
+}
+
+.popup-backdrop {
+    background-color: rgba(0, 0, 0, .55);
+}
+
+/*---------- $1.4. Buttons ----------*/
+
+.btn-cancel:hover {
+    background-color: rgba(var( --color-primary-rgb),0.07);
+    border:0;
+    color:#EC2239;
+}
+
+.btn-cancel:active {
+    background-color: rgba(var( --color-primary-rgb),0.13);
+    border:0;
+    color:#EC2239;
+}
+.btn[class*="text-"]:hover {
+    background-color: rgba(var( --color-primary-rgb),0.07);
+}
+
+/* Button Group */ 
+.pattern-preview-content .button-group-item.button-group-selected-item {
+    background-color: #FDE9EB;
+    color: var(--color-primary);
+}
+
+/*---------- $1.5 Inputs ----------*/
+::-webkit-input-placeholder {
+    font-size: var(--font-size-s);
+}
+
+/*---------- $1.6 Widgets ----------*/
+
+/* Caroussel */
+
+.caroussel-header .carousel-dots-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: var(--space-l);   
+}
+
+/* Chat */
+.chat.right .chat-message {
+    background-color: var(--color-primary);
+}
+
+/* Dropdown Tags */
+.choices__list--multiple .choices__item { 
+    background-color:  var(--color-primary);
+    color: var(--color-neutral-0);
+}
+
+.choices[data-type*="select-multiple"] .choices__button::after {
+    color: var(--color-neutral-0);
+}
+
+/* Section */
+.layout-native .section-title {
+    color: var(--color-neutral-10);
+    font-size: var(--font-size-h5);
+    padding: var(--space-none) var(--space-none);
+    border-bottom: var(--border-size-none);
+}
+.layout-native .section-title i {
+    font-size: var(--font-size-h5);
+    margin-right: var(--space-s);
+}
+.layout-native .section-title-link i {
+    margin-right: 0;
+    margin-left: var(--space-s);
+    vertical-align: text-top;
+}
+.layout-native .section-content {
+    margin-top: var(--space-base);
+}
+
+/* ================================================================ */
+/*  $6.3 - Styles - Space                                           */
+/* ================================================================ */
+
+/* $6.3.1 - Styles - Space - Padding */
+.padding-s-plus { padding: var(--space-s-plus); }
+
+/* $6.3.2 - Styles - Space - Padding Top */
+.padding-top-s-plus { padding-top: var(--space-s-plus); }
+
+/* $6.3.3 - Styles - Space - Padding Right */
+.padding-right-s-plus { padding-right: var(--space-s-plus); }
+
+/* $6.3.4 - Styles - Space - Padding Bottom */
+.padding-bottom-s-plus { padding-bottom: var(--space-s-plus); }
+
+/* $6.3.5 - Styles - Space - Padding Left */
+.padding-left-s-plus { padding-left: var(--space-s-plus); }
+
+/* $6.3.6 - Styles - Space - Padding Vertical */
+.padding-y-s-plus {
+    padding-top: var(--space-s-plus);
+    padding-bottom: var(--space-s-plus);
+}
+
+/* $6.3.7 - Styles - Space - Padding Horizontal */
+.padding-x-s-plus {
+    padding-left: var(--space-s-plus);
+    padding-right: var(--space-s-plus);
+}
+
+/* $6.3.8 - Styles - Space - Margin */
+.margin-s-plus { margin: var(--space-s-plus); }
+
+/* $6.3.9 - Styles - Space - Margin Top */
+.margin-top-s-plus { margin-top: var(--space-s-plus); }
+
+/* $6.3.10 - Styles - Space - Margin Right */
+.margin-right-s-plus { margin-right: var(--space-s-plus); }
+
+/* $6.3.11 - Styles - Space - Margin Bottom */
+.margin-bottom-s-plus { margin-bottom: var(--space-s-plus); }
+
+/* $6.3.12 - Styles - Space - Margin Left */
+.margin-left-s-plus { margin-left: var(--space-s-plus); }
+
+/* $6.3.13 - Styles - Space - Margin Vertical */
+.margin-y-s-plus {
+    margin-top: var(--space-s-plus);
+    margin-bottom: var(--space-s-plus);
+}
+
+/* $6.3.14 - Styles - Space - Margin Horizontal */
+.margin-x-s-plus {
+    margin-left: var(--space-s-plus);
+    margin-right: var(--space-s-plus);
+}
+
+/*---------- $1.8 Custom Patterns ----------*/
+
+/* Filter Item */
+.popup-dialog.dialog-fill {
+    bottom: 0;
+    margin: 0;
+    padding: var(--space-base) var(--space-base) var(--space-s);
+    position: absolute;
+}
+.filter-item {
+    text-align: center;
+}
+.filter-item .filter-item-image-wrapper {
+    border: var(--border-size-l) solid var(--color-neutral-3);
+    border-radius: var(--border-radius-circle);
+    height: 78px;
+    margin: auto;
+    width: 78px;
+}
+.filter-item.is--highlighted .filter-item-image-wrapper {
+    border-color: var(--color-primary);
+}
+.filter-item .filter-item-image-wrapper .filter-item-image {
+    align-items: center;
+    background-color: var(--color-neutral-2);
+    border: var(--border-size-m) solid var(--color-neutral-0);
+    border-radius: var(--border-radius-circle);
+    display: flex;
+    height: 72px;
+    justify-content: center;
+    width: 72px;
+}
+.filter-item .filter-item-image-wrapper .filter-item-image img {
+    max-height: 42px;
+}
+
+.filter-item .filter-item-label {
+    color: var(--color-neutral-7);
+    font-family: 'SFProText';
+    font-weight: var(--font-semi-bold);
+    margin-top: var(--space-s);
+}
+
+/* Branding Card */
+
+.layout-native .branding-card {
+    width:162px;
+    height:190px;
+    border: 0;
+}
+.layout-native .branding-card-content {
+    position: relative;   
+}
+
+.layout-native .branding-card .logo-container{
+    position: absolute;
+    top: -29px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.layout-native .branding-card .card-image {
+    padding: 0;
+}
+.layout-native .branding-card .branding-image img {
+    height: 110px;
+    object-fit: cover;
+}
+.layout-native .branding-card .card-content {
+    padding: 0;
+    padding-top: var(--space-s);
+}
+.layout-native .branding-card .filter-item-image-wrapper {
+    height: 58px;
+    width: 58px;
+}
+.layout-native .branding-card .filter-item-image {
+    height: 52px;
+    width: 52px;
+}
+.layout-native .branding-card .filter-item-image img {
+    max-height: 29px;
+}
+.layout-native .branding-header .star-rating {
+    display: block;
+    font-size: var(--font-size-s);
+    text-align: right;
+    margin-top: var(--space-s);
+}
+.layout-native .branding-card-star-rating-widget {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.layout-native .branding-card .card-title{
+   padding: 0; 
+}
+.layout-native .branding-link {
+    color: var(--color-green);
+    display: block;
+    font-size: var(--font-size-s);
+    padding-top: var(--space-s);
+}
+
+
+/* Custom List Item / Shopping Item */
+.list-item-custom,
+.shopping-item {
+    border: 0;   
+}
+
+.list-item-custom img {
+    height: 92px;   
+    width: 122px;
+    object-fit: cover;
+    border-radius: var(--border-radius-soft);
+}
+
+.layout-native .card-sectioned.flex-direction-row.list-item-custom .card-image,
+.layout-native .card-sectioned.flex-direction-row.shopping-item .card-image {
+    padding: var(--space-s) var(--space-none) var(--space-none);
+}
+
+.list-item-custom .card-content,
+.shopping-item .card-content {
+    line-height: 17px;
+    padding: 0;
+    padding-left: var(--space-base);
+}
+
+.list-item-custom .card-bottom,
+.shopping-item .card-bottom {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    padding: 0;
+    padding-left: var(--space-base);
+}
+
+.list-item-custom .list-item-custom-price,
+.shopping-item .shopping-item-price {
+    flex:1;
+}
+
+/* Shopping Cart */
+.card.card-sectioned.shopping-item {
+    border-bottom: var(--border-size-s) solid var(--color-neutral-4);
+    padding-bottom: var(--space-m);
+    border-radius: var(--border-radius-none);
+    margin-bottom: var(--space-s);
+}
+
+.shopping-item img {
+    height: 69px;
+    width: 90px;
+    object-fit: cover;
+    border-radius: var(--border-radius-soft);
+}
+
+.shopping-item .card-title {
+    display: flex;
+    flex-direction: row;
+    padding-right: 5px;
+    padding-top: var(--space-s);
+}
+.shopping-item .card-title .icon {
+    margin-top: var(--space-xs);
+}
+.shopping-item-title {
+    flex: 1;   
+}
+.shopping-item .card-bottom {
+    padding-right: var(--space-xs);
+    padding-top: var(--space-s);
+}
+
+/* Counter Shopping Cart */
+.counter-shopping-cart {
+    display: flex;   
+    justify-content: flex-end;
+    margin-top: 5px;
+    width: 78px;
+}
+.counter-shopping-cart-minus {
+    color: var(--color-neutral-5);
+}
+.counter-shopping-cart-minus.text-primary {
+    color: var(--color-primary);
+}
+.counter-shopping-cart-plus {
+    color: var(--color-primary);
+}
+.counter-shopping-cart-value {
+    width: 30px;
+    text-align: center;
+}
+
+.phone .form-control[data-input].counter-shopping-cart-input {
+    border: 0;
+    height: 19px;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+}
+
+/* Card Review */
+
+.card-review-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.card-review-username {
+    flex:1;
+    margin-left: var(--space-s);
+}
+
+.card-review-content {
+    padding: 2px;
+    border-bottom: var(--border-size-s) solid var(--color-neutral-4);
+    padding-bottom: var(--space-base);
+    margin-bottom: var(--space-base);
+    margin-top: var(--space-s);
+}
+/*---------- $2. Custom CSS ----------*/
+
+.layout-native .is--focusable :focus {
+     outline: 0;
+}
+
+/*Star Rating*/
+.star-rating {
+    display: inline-block;
+}
+.star-rating-small {
+    padding: 2px var(--space-xs);
+    position: relative;
+}
+.star-rating-small.star-rating-light:before {
+    background: var(--color-secondary);
+    border-radius: var(--border-radius-soft);
+    content: "";
+    position: absolute;
+    opacity: 0.15;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+.star-rating-small {
+    color: var(--color-neutral-8);
+    font-weight: var(--font-semi-bold);
+}
+.star-rating-light {
+    background: transparent;
+    border-radius: var(--border-radius-soft);
+    color: var(--color-yellow);
+}
+.star-rating-light .start-rating-value {
+    color: var(--color-yellow);
+}
+.start-rating-value {
+    color: var(--color-neutral-8);
+    font-weight: var(--font-semi-bold);
+}
+
+.star-rating .fa-star,
+.star-rating .fa-star-half-empty {
+    color: var(--color-yellow);
+}
+.star-rating .start-empty {
+    color: var(--color-neutral-5);
+}
+.star-rating-small .icon {
+    margin-left: var(--space-xs);
+}
+.star-rating:not(.star-rating-small) .icon {
+    font-size: 22px;
+    margin-right: var(--space-s);
+}
+.star-rating:not(.star-rating-small) {
+    display: flex;
+}
+.star-rating:not(.star-rating-small) .start-rating-value {
+    padding-left: var(--space-xs);
+}
+
+
+/* Horizontal List */
+.list.list-group.horizontal-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: calc(-1 * var(--space-base));
+    margin-right: var(--space-base);
+    overflow-x: auto;
+    padding-left: var(--space-base);
+    padding-right: var(--space-base);
+    width: calc(100% + var(--space-l));
+}
+.list.list-group.horizontal-list > div {
+    margin-right: var(--space-base);
+}
+.list.list-group.horizontal-list > div:last-of-type {
+    padding-right: var(--space-base);
+}
+
+/* Filters' Popup */
+.range-slider {
+    padding: var(--space-none);
+}
+.range-slider .noUi-pips-horizontal {
+    padding-top: var(--space-xs);
+}
+.range-slider .noUi-value-horizontal {
+    top: -2px;
+}
+
+/* Product Rate Popup */
+.single-star-rate {
+    border: var(--border-size-s) solid var(--color-neutral-6);
+    border-radius: var(--border-radius-soft);
+    height: 55px;
+    width: 51px;
+}
